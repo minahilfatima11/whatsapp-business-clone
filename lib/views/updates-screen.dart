@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_business/views/calls-screen.dart';
 
-
 import '../controllers/updates_controller.dart';
+import '../controllers/channels_controller.dart'; // Import the ChannelsController
 import '../widgets/update_item.dart';
 import 'chats-screen.dart';
 
@@ -15,12 +15,11 @@ class UpdatesScreen extends StatefulWidget {
 
 class _UpdatesScreenState extends State<UpdatesScreen> {
   final UpdatesController _updatesController = UpdatesController();
+  final ChannelsController _channelsController = ChannelsController(); // Instance of ChannelsController
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
       body: Container(
         color: Colors.black,
         child: ListView(
@@ -34,7 +33,7 @@ class _UpdatesScreenState extends State<UpdatesScreen> {
               automaticallyImplyLeading: false,
               title: const Text(
                 "Updates",
-                style: TextStyle(color: Colors.white, fontSize: 20,),
+                style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               actions: [
                 IconButton(
@@ -85,11 +84,90 @@ class _UpdatesScreenState extends State<UpdatesScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 30,),
+
+            // Boost Status Container Section (Updated)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 36.0),
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 52.0),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  border: Border.all(color: Colors.grey.withOpacity(0.4)),
+                  borderRadius: BorderRadius.circular(26),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.volume_down_outlined,
+                      color: Color(0xFF25D366),
+                      size: 18,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text(
+                      'Boost Status',
+                      style: TextStyle(
+                        color: Color(0xFF25D366),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 16,),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+              child: Text(
+                'Channels',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+
+            // Vertical Scrolling for Channels (Dynamic content from ChannelsController)
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 0.0), // Adjust as needed
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: _channelsController.getChannels().map((channel) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: ListTile(
+                        leading: CircleAvatar(
+
+                          backgroundImage: AssetImage(channel.avatarImage),
+                        ),
+                        title: Text(
+                          channel.name,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        subtitle: Text(
+                          channel.lastMessage,
+                          style: TextStyle(color: Colors.white.withOpacity(0.6)),
+                        ),
+                        tileColor: Colors.grey[800],
+                        trailing: Text(
+                          channel.time,
+                          style: TextStyle(color: Colors.white.withOpacity(0.6)),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            )
+
           ],
         ),
       ),
-
-
     );
   }
 }
