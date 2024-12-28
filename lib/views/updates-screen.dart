@@ -121,7 +121,7 @@ class _UpdatesScreenState extends State<UpdatesScreen> {
             SizedBox(height: 16,),
 
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
               child: Text(
                 'Channels',
                 style: TextStyle(
@@ -139,7 +139,7 @@ class _UpdatesScreenState extends State<UpdatesScreen> {
                 child: Column(
                   children: _channelsController.getChannels().map((channel) {
                     return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(vertical: 4.0),
                       child: ListTile(
                         leading: CircleAvatar(
 
@@ -167,6 +167,37 @@ class _UpdatesScreenState extends State<UpdatesScreen> {
 
           ],
         ),
+      ),
+
+      // Floating Action Buttons for New Updates
+      floatingActionButton: Stack(
+        children: [
+          Positioned(
+            bottom: 80,
+            right: 16,
+            child: FloatingActionButton(
+              onPressed: () {
+                // Navigate to create a new status update
+              },
+              backgroundColor: Color(0xFF333333),
+              child: const Icon(Icons.edit, color: Colors.white),
+              mini: true,  // This makes the button smaller
+            ),
+          ),
+
+          Positioned(
+            bottom: 10,
+            right: 12,
+            child: FloatingActionButton(
+              onPressed: () {
+                // Navigate to create a new text update
+
+              },
+              backgroundColor: Colors.white,
+              child: const Icon(Icons.photo_camera_rounded , color: Colors.black,),
+            ),
+          ),
+        ],
       ),
     );
   }

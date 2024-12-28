@@ -73,6 +73,8 @@ class _ChatsScreenState extends State<ChatsScreen> {
           color: Colors.black,
         ),
       ),
+
+
    /* bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
         selectedItemColor: Colors.white,
