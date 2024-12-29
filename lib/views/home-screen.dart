@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_business/views/tools-screen.dart';
 import 'package:whatsapp_business/views/updates-screen.dart';
 import '../widgets/bottom-navbar-widget.dart';
 import 'calls-screen.dart';
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ChatsScreen(),
     CallsScreen(),
     UpdatesScreen(),
-    //ToolsScreen(),
+    ToolsScreen(),
   ];
 
   void _onTabTapped(int index) {
