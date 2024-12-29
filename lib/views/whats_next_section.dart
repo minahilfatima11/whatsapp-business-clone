@@ -18,7 +18,7 @@ class WhatsNextSection extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(0.2),
+              color: Color(0xFF1A2125).withOpacity(0.8),
               borderRadius: BorderRadius.circular(17),
             ),
             child: Column(
@@ -31,7 +31,7 @@ class WhatsNextSection extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10), // Circular corners
                         child: Image.asset(
-                          "assets/avatar3.jpg", // Use your image asset path here
+                          "assets/avatar1.jpg", // Use your image asset path here
                           height: 80,
                           width: 50,
                           fit: BoxFit.cover,
