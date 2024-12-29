@@ -18,17 +18,17 @@ class ToolsController {
       ToolModel(
         title: "Send your first message",
         description: "Welcome new customers with an automatic greeting.",
-        icon: Icons.message, // Icon is IconData type
+        icon: Icons.messenger_outline, // Icon is IconData type
       ),
       ToolModel(
         title: "Create a catalog",
         description: "Share your products and services in your catalog.",
-        icon: Icons.shopping_cart, // Icon is IconData type
+        icon: Icons.shopping_basket_outlined, // Icon is IconData type
       ),
       ToolModel(
         title: "Set up quick replies",
         description: "Save time by using quick replies for common questions.",
-        icon: Icons.reply, // Icon is IconData type
+        icon: Icons.reply_all, // Icon is IconData type
       ),
     ];
   }

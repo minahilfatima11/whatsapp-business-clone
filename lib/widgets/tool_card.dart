@@ -9,16 +9,15 @@ class ToolCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 0),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.transparent,
-        border: Border.all(color:Colors.grey.shade900 ),
-        borderRadius: BorderRadius.circular(12),
+
       ),
       child: Row(
         children: [
-          Icon(tool.icon, size: 28, color: Colors.grey.withOpacity(0.3)),
+          Icon(tool.icon, size: 28, color: Colors.grey),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -26,9 +25,9 @@ class ToolCard extends StatelessWidget {
               children: [
                 Text(
                   tool.title,
-                  style: const TextStyle(fontSize: 13,  color: Colors.white),
+                  style: const TextStyle(fontSize: 14,  color: Colors.white),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 6),
                 Text(tool.description, style: const TextStyle(fontSize: 12,color: Colors.grey)),
               ],
             ),

@@ -8,9 +8,9 @@ class BusinessToolsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tools = [
-      ToolModel(title: "Send your first message", description: "Welcome new customers with an automatic greeting.", icon: Icons.message),
-      ToolModel(title: "Create a catalog", description: "Share your products and services in your catalog.", icon: Icons.shopping_cart),
-      ToolModel(title: "Set up quick replies", description: "Save time by using quick replies for common questions.", icon: Icons.reply),
+      ToolModel(title: "Send your first message", description: "Welcome new customers with an automatic greeting.", icon: Icons.messenger_outline),
+      ToolModel(title: "Create a catalog", description: "Share your products and services in your catalog.", icon: Icons.shopping_basket_outlined),
+      ToolModel(title: "Set up quick replies", description: "Save time by using quick replies for common questions.", icon: Icons.reply_all),
     ];
 
     return Padding(
