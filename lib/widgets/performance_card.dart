@@ -19,6 +19,12 @@ class PerformanceCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Icon(
+            data.icon, // Use the icon data passed in the PerformanceModel
+            size: 24,
+            color: Colors.white, // Customize the color of the icon
+          ),
+          const SizedBox(height: 8),
           Text(
             data.value,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
