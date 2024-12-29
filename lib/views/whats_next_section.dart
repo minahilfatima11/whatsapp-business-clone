@@ -32,39 +32,44 @@ class WhatsNextSection extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10), // Circular corners
                         child: Image.asset(
                           "assets/avatar3.jpg", // Use your image asset path here
-                          height: 60,
-                          width: 60,
+                          height: 80,
+                          width: 50,
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
+
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          SizedBox(height: 0,),
                           Text(
-                            "Real results from ads",
-                            style: TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold),
+                            " Real results from ads",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+
+                            " See how businesses like yours are \n getting new customers on Whatsapp",
+                            style: TextStyle(fontSize: 13, color: Colors.grey),
                           ),
                         ],
                       ),
                     ),
                   ],
                 ),
-                // Adjusted the padding to reduce gap between the texts
-                const Padding(
-                  padding: EdgeInsets.only(left: 96.0, top: 0.0), // Reduced top gap for the second text
-                  child: Text(
-                    "See how businesses like yours are getting new customers on Whatsapp",
-                    style: TextStyle(fontSize: 13, color: Colors.grey),
-                  ),
-                ),
-               // Reduced gap before the button
+                const SizedBox(height: 0), // Add space before button
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.only(bottom: 12.0),
                     child: SizedBox(
-                      width: 250,  // Adjust the width as needed
+                      width: 250, // Adjust the width as needed
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -76,18 +81,15 @@ class WhatsNextSection extends StatelessWidget {
                         child: const Text(
                           "Watch video",
                           style: TextStyle(
-                            color: Colors.black,  // Set the text color to black
+                            color: Colors.black, // Set the text color to black
                           ),
                         ),
                       ),
                     ),
                   ),
-                )
-
+                ),
               ],
-
             ),
-
           ),
         ],
       ),
