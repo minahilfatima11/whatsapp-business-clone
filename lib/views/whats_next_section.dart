@@ -19,7 +19,7 @@ class WhatsNextSection extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.grey.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(17),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
