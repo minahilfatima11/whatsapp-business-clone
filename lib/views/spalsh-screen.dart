@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'home-screen.dart';
 
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -23,7 +22,6 @@ class _SplashScreenState extends State<SplashScreen>
       duration: Duration(seconds: 2),
     );
 
-
     _animation = CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
@@ -32,12 +30,12 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     // Navigate to HomeScreen after 3 seconds
-    Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-      );
-    });
+    // Timer(Duration(seconds: 4), () {
+    //   Navigator.pushReplacement(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => HomeScreen()),
+    //   );
+    // });
   }
 
   @override
@@ -49,22 +47,18 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1C)
-
-
-
-      ,
+      backgroundColor: Color(0xFF1C1C1C),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             ScaleTransition(
               scale: _animation,
               child: Image.asset(
-                'assets/whatsapp_business.png',
+                'assets/wb_o.png',
                 height: 160,
-                width:160,
+                width: 160,
+                color: Colors.white,
               ),
             ),
             SizedBox(height: 24),
@@ -79,7 +73,6 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
 
-
             SizedBox(height: 122),
             // App Name
 
@@ -88,7 +81,6 @@ class _SplashScreenState extends State<SplashScreen>
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,
-
               ),
             ),
           ],
