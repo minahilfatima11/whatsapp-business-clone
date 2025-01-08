@@ -11,7 +11,7 @@ class PerformanceController {
       ),
       PerformanceModel(
         icon: Icons.calendar_today,
-        title: "Catalog views",
+        title: "Cataloge views",
         value: "--",
       ),
       PerformanceModel(
