@@ -56,12 +56,12 @@ class _SplashScreenState extends State<SplashScreen>
               scale: _animation,
               child: Image.asset(
                 'assets/wb_o.png',
-                height: 160,
-                width: 160,
+                height: 80,
+                width: 80,
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 24),
+            SizedBox(height: 28),
             // App Name
 
             Text(
