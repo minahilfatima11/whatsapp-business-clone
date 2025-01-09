@@ -30,12 +30,12 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     // Navigate to HomeScreen after 3 seconds
-    // Timer(Duration(seconds: 4), () {
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => HomeScreen()),
-    //   );
-    // });
+    /* Timer(Duration(seconds: 4), () {
+      Navigator.pushReplacement(
+        context,
+         MaterialPageRoute(builder: (context) => HomeScreen()),
+       );
+     });*/
   }
 
   @override
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1C),
+      backgroundColor: Color(0xFF1A2125).withOpacity(0.8),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
